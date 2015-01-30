@@ -16,7 +16,6 @@ And then execute:
     $ bundle install
 
 
-
 Add to application.rb:
 
     require 'redactor-rails'
@@ -48,23 +47,6 @@ Add to your `application.css`:
 For each textarea that you want to use with Redactor, add the "redactor" class and ensure it has a unique ID:
 
     <%= text_area_tag :editor, "", class: "redactor", rows: 40, cols: 120 %>
-
-### Custom Your redactor
-
-If you need change some config in redactor, you can
-
-    $ rails generate redactor:config
-
-Then generate `app\assets\redactor-rails\config.js`.
-
-See the [Redactor Documentation](http://redactorjs.com/docs/settings/) for a full list of configuration options.
-
-
-If You Want To setup a new language in Redactor you should do two things:
-
-In you file `app\assets\redactor-rails\config.js` set option
-
-    "lang":'fr'
 
 ## Contributing
 
