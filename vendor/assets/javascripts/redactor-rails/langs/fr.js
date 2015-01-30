@@ -8,7 +8,7 @@ $.Redactor.opts.langs['fr'] = {
 	link_insert: 'Insérer/Modifier un lien',
 	unlink: 'Nettoyer le lien',
 	styles: 'Styles',
-	paragraph: 'Paragraphe',
+	formatting: 'Format',
 	quote: 'Citation',
 	code: 'Code',
 	header1: 'Titre 1',
