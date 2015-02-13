@@ -6,9 +6,10 @@ RedactorPlugins.clips = function()
 		init: function()
 		{
 			var items = [
-				['Lorem ipsum...', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'],
-				['2 Colonnes', '<p></p><div class="row"><div class="col-xs-6">Colonne</div><div class="col-xs-6">Colonne</div></div><br />'],
-				['3 Colonnes', '<p></p><div class="row"><div class="col-xs-4">Colonne</div><div class="col-xs-4">Colonne</div><div class="col-xs-4">Colonne</div></div><br />']
+				['Lorem ipsum...', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'],
+				['2 Colonnes', '<div class="row"><div class="col-xs-6"><span>Colonne</span></div><div class="col-xs-6"><span>Colonne</span></div></div><br />'],
+				['3 Colonnes', '<div class="row"><div class="col-xs-4"><span>Colonne</span></div><div class="col-xs-4"><span>Colonne</span></div><div class="col-xs-4"><span>Colonne</span></div></div><br />'],
+				['4 Colonnes', '<div class="row"><div class="col-xs-3"><span>Colonne</span></div><div class="col-xs-3"><span>Colonne</span></div><div class="col-xs-3"><span>Colonne</span></div><div class="col-xs-3"><span>Colonne</span></div></div><br />']
 			];
 
 			this.clips.template = $('<ul id="redactor-modal-list">');
@@ -53,7 +54,7 @@ RedactorPlugins.clips = function()
 		insert: function(html)
 		{
 			this.selection.restore();
-			this.insert.html(html);
+			this.insert.html(html, false);
 			this.modal.close();
 			this.observe.load();
 		}
