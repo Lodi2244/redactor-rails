@@ -55,6 +55,7 @@ $.Redactor.opts.langs['fr'] = {
 	left: 'à gauche',
 	center: 'centré',
 	right: 'à droite',
+	responsive: 'largeur adaptative',
 	image_web_link: 'lien de l\'image',
 	text: 'Texte',
 	mailto: 'Envoyer à ',

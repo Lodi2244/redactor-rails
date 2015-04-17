@@ -3089,6 +3089,7 @@
           var imageFloat = '';
           var imageDisplay = '';
           var imageMargin = '';
+          var imageClass = '';
 
           switch (floating)
           {
@@ -3104,9 +3105,15 @@
               imageDisplay = 'block';
               imageMargin = 'auto';
             break;
+            case 'responsive':
+              imageDisplay = 'block';
+              imageMargin = 'auto';
+              imageClass = 'img-responsive';
+            break;
           }
 
           $image.css({ 'float': imageFloat, display: imageDisplay, margin: imageMargin });
+          $image.addClass(imageClass);
           $image.attr('rel', $image.attr('style'));
         },
         update: function($image)
@@ -5336,6 +5343,7 @@
                 + '<option value="left">' + this.lang.get('left') + '</option>'
                 + '<option value="center">' + this.lang.get('center') + '</option>'
                 + '<option value="right">' + this.lang.get('right') + '</option>'
+                + '<option value="responsive">' + this.lang.get('responsive') + '</option>'
               + '</select>'
             + '</section>',
 
