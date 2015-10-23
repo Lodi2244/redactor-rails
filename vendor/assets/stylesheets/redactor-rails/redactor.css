@@ -680,6 +680,9 @@ body .redactor-box-fullscreen {
   font-size: 30px;
   font-weight: 300;
   cursor: pointer;
+  background: none;
+  border: none;
+  line-height: 30px;
 }
 #redactor-modal-close:hover {
   color: #000;

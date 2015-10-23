@@ -7,3 +7,4 @@
 //= require redactor-rails/plugins/fontsize
 //= require redactor-rails/plugins/fontfamily
 //= require redactor-rails/plugins/scriptbuttons
+//= require redactor-rails/plugins/imagepx

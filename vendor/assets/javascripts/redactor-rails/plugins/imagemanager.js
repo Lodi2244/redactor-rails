@@ -10,6 +10,7 @@ if (!RedactorPlugins) var RedactorPlugins = {};
 				if (!this.opts.imageManagerJson) return;
 
 				this.modal.addCallback('image', this.imagemanager.load);
+				
 			},
 			load: function()
 			{
