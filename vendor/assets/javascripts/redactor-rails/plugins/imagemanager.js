@@ -51,7 +51,6 @@ if (!RedactorPlugins) var RedactorPlugins = {};
 			},
 			insert: function(e)
 			{
-				console.log(e, this);
 				this.image.insert('<img src="' + $(e.target).attr('rel') + '" alt="' + $(e.target).attr('title') + '">');
 			}
 		};
