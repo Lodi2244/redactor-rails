@@ -3106,8 +3106,6 @@
               imageMargin = 'auto';
             break;
             case 'responsive':
-              imageDisplay = 'block';
-              imageMargin = 'auto';
               imageClass = 'img-responsive';
             break;
           }
