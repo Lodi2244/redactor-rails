@@ -10,6 +10,7 @@ if (!RedactorPlugins) var RedactorPlugins = {};
 				if (!this.opts.imageManagerJson) return;
 
 				this.modal.addCallback('image', this.imagemanager.load);
+				
 			},
 			load: function()
 			{
@@ -36,7 +37,7 @@ if (!RedactorPlugins) var RedactorPlugins = {};
 							var thumbtitle = '';
 							if (typeof val.title !== 'undefined') thumbtitle = val.title;
 
-							var img = $('<img src="' + val.thumb + '" rel="' + val.image + '" title="' + thumbtitle + '" style="width: 100px; height: 75px; cursor: pointer;" />');
+							var img = $('<img src="' + val.image + '" rel="' + val.image + '" title="' + thumbtitle + '" style="width: 100px; height: 75px; cursor: pointer;" />');
 							$('#redactor-image-manager-box').append(img);
 							$(img).click($.proxy(this.imagemanager.insert, this));
 
@@ -50,7 +51,6 @@ if (!RedactorPlugins) var RedactorPlugins = {};
 			},
 			insert: function(e)
 			{
-				console.log(e, this);
 				this.image.insert('<img src="' + $(e.target).attr('rel') + '" alt="' + $(e.target).attr('title') + '">');
 			}
 		};

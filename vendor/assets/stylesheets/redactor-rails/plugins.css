@@ -1,3 +1,8 @@
 /*
 *= require_tree ./plugins
 */
+
+#redactor-modal-overlay.preview {
+  background-position: center center;
+  background-repeat: no-repeat;
+}

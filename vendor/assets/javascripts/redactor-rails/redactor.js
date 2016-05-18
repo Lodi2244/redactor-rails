@@ -3116,8 +3116,7 @@
               imageMargin = 'auto';
             break;
             case 'responsive':
-              imageDisplay = 'block';
-              imageMargin = 'auto';
+              imageDisplay = 'inline-block';
               imageClass = 'img-responsive';
             break;
           }
