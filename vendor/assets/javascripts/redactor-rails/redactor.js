@@ -1243,7 +1243,13 @@
           // click
           this.$editor.on('click.redactor', $.proxy(function(e)
           {
-            var type = 'click';
+            var type = 'click',
+                $target = $(e.target);
+
+            if($target.is('a') || $target.closest('a').length) {
+              e.preventDefault();
+            }
+
             if ((this.core.getEvent() == 'click' || this.core.getEvent() == 'arrow'))
             {
               type = false;
@@ -2839,8 +2845,6 @@
             else
             {
               var top = ($button.innerHeight() + keyPosition.top) + 'px';
-
-              console.log('DROPDOWN SHOW : ', $button, keyPosition, ' -- ', top);
 
               $dropdown.css({ position: 'absolute', left: left, top: top }).show();
             }
@@ -5142,7 +5146,6 @@
 
             this.code.sync();
             this.core.setCallback('insertedLink', $a);
-
           }
 
           // link tooltip
