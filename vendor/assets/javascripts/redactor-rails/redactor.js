@@ -2808,6 +2808,14 @@
 
             var keyPosition = $button.offset();
 
+            // Add scroll top offset to dropdow, positionment
+            var scrollTop = (document.documentElement && document.documentElement.scrollTop) ||
+                              document.body.scrollTop;
+
+            // Only apply if we have the scrollTop bug
+            if($(window).scrollTop() != scrollTop)
+              keyPosition.top += scrollTop;
+
             // fix right placement
             var dropdownWidth = $dropdown.width();
             if ((keyPosition.left + dropdownWidth) > $(document).width())
@@ -2831,6 +2839,8 @@
             else
             {
               var top = ($button.innerHeight() + keyPosition.top) + 'px';
+
+              console.log('DROPDOWN SHOW : ', $button, keyPosition, ' -- ', top);
 
               $dropdown.css({ position: 'absolute', left: left, top: top }).show();
             }
@@ -7303,6 +7313,7 @@
         {
           var top = this.$toolbar.innerHeight() + this.opts.toolbarFixedTopOffset;
           var position = 'fixed';
+
           if (this.opts.toolbarFixedTarget !== document)
           {
             top = (this.$toolbar.innerHeight() + this.$toolbar.offset().top) + this.opts.toolbarFixedTopOffset;
