@@ -1,6 +1,6 @@
 class RedactorRails::Picture < RedactorRails::Asset
   has_attached_file :data,
-                    url: "system/redactor_rails/pictures/:id/:style_:basename.:extension",
+                    url: "/system/redactor_rails/pictures/:id/:style_:basename.:extension",
                     path: ":rails_root/public/system/redactor_rails/pictures/:id/:style_:basename.:extension",
                     styles: { content: '800>', thumb: '118x100#' }
 
