@@ -1877,6 +1877,7 @@
           // remove br in the of li
           html = html.replace(new RegExp('<br\\s?/?></li>', 'gi'), '</li>');
           html = html.replace(new RegExp('</li><br\\s?/?>', 'gi'), '</li>');
+          html = html.replace(new RegExp('<br\\s?/?></p>', 'gi'), '</p>');
 
           // remove verified
           html = html.replace(new RegExp('<div(.*?) data-tagblock="redactor"(.*?[^>])>', 'gi'), '<div$1$2>');
