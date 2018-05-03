@@ -1,5 +1,4 @@
 class RedactorRails::BaseController < ApplicationController
-
   def index
     @redactors = controller_model.order :id
     render json: @redactors.to_json
@@ -12,9 +11,9 @@ class RedactorRails::BaseController < ApplicationController
     @redactor.data = RedactorRails::Http.normalize_param(file, request)
 
     if @redactor.save
-      render text: { filelink: @redactor.url }.to_json
+      render json: { filelink: @redactor.url }
     else
-      render nothing: true
+      head 422
     end
   end
 
